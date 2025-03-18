@@ -1,0 +1,15 @@
+﻿<h1>PostBack  Demo</h1>
+
+<!--<form method="post" action="/home/index">
+	<input type="submit"/>
+
+</form> -->
+@ViewBag.msg <br />
+Time: @DateTime.Now.ToLongTimeString()
+<br /> 
+<br /> 
+
+Please, click login.
+<br />
+
+<button><a style="color:black" asp-controller="home" asp-action="login">Login</a></button>

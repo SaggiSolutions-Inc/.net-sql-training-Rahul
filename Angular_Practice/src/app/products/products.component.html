@@ -1,0 +1,11 @@
+<h1>Consuming WEB API</h1>
+<h2>List of the products</h2>
+<div *ngFor="let product of products">
+    <img [src]="product.image" alt="{{ product.title }}" style="max-width: 200px;" />
+    <h2> Title: {{ product.title }}</h2>
+    <p>Product Price: ${{ product.price }}</p>
+    <p>Product Category: {{ product.category }}</p>
+    <p>Product Description {{ product.description }}</p>
+    <p>Rating: {{ product.rating.rate }} ({{ product.rating.count }} reviews)</p>
+    <hr/>
+  </div>

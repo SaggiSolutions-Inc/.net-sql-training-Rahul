@@ -1,0 +1,23 @@
+﻿<h1>Postback - Ex03</h1>
+@{
+	string[] operations = { "Create", "Retrieve", "Update", "Delete" };
+}
+
+<br />
+
+<form method="post" action="/postback/ex03">
+	@foreach(string op in operations)
+	{
+		<button name="b2" value="@op">@op</button>
+	}
+</form>
+<br />
+@ViewBag.msg
+<br />
+Time: @DateTime.Now.ToLongTimeString()
+<a asp-controller="postback" asp-action="index">Index</a> |
+<a asp-controller="postback" asp-action="ex01">Ex01</a> |
+<a asp-controller="postback" asp-action="ex02">Ex02</a> |
+<a asp-controller="postback" asp-action="ex04">Ex04</a> |
+<a asp-controller="postback" asp-action="ex05">Ex05</a> |
+

@@ -1,0 +1,26 @@
+﻿<h1>List of Courses </h1>
+@{
+	List<CourseModel> courses = ViewBag.courses;
+}
+
+<table class="table">
+	<tr>
+		<th>ID</th>
+		<th>Course</th>
+		<th>Faculty</th>
+		<th>Duration In Days</th>
+		<th>Fee</th>
+		<th>Operations</th>
+	</tr>
+	@foreach(CourseModel c in courses)
+	{
+		<tr>
+			<td>@c.Id</td>
+			<td>@c.Course</td>
+			<td>@c.Faculty</td>
+			<td>@c.DurationInDays</td>
+			<td>@c.Fee</td>
+			<td><a asp-controller="courses" asp-action="details" asp-route-id="@c.Id">Details</a></td>
+		</tr>
+	}
+</table>

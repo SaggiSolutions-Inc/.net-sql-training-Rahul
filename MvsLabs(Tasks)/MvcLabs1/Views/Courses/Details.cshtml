@@ -1,0 +1,13 @@
+﻿<h1> Course Details for @ViewBag.course.Id</h1>
+
+@{
+	CourseModel course = ViewBag.course;
+}
+
+ID: @course.Id <br />
+Course: @course.Course <br />
+Faculty: @course.Faculty <br />
+Duration: @course.DurationInDays <br />
+Fee: @course.Fee <br />
+
+<a asp-controller="courses" asp-action="index">Back to index</a>

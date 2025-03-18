@@ -1,0 +1,27 @@
+﻿<h1> Razor View, Example - 01</h1>
+@{
+	string[] fruits = { "Apple", "Banana", "Cherry", "Grapes", "Mango", };
+	List<string> vegetables = new List<string> { "Onion", "Brinjal", "Potato" };
+
+}
+<h1>List of fruits</h1>
+
+<ol>
+	@for (int i=0;i<fruits.Length;i++){
+		<li>@fruits[i]</li>
+	}
+</ol>
+<h1>List of Vegetables</h1>
+<ol>
+	@foreach (string v in vegetables){
+		<li>@v</li>
+	}
+</ol>
+<br />
+Goto:
+<a asp-controller="RazorDemo" asp-action="Index">Index</a> |
+<a asp-controller="RazorDemo" asp-action="Ex02">Ex-02</a> |
+<a asp-controller="RazorDemo" asp-action="Ex03">Ex-03</a> |
+<a asp-controller="RazorDemo" asp-action="Ex04">Ex-04</a> |
+<a asp-controller="RazorDemo" asp-action="Ex05">Ex-05</a> |
+<a asp-controller="RazorDemo" asp-action="Ex06">Ex-06</a> |

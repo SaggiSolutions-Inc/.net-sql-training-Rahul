@@ -1,0 +1,30 @@
+﻿<h1> Razor Demo View, Example-05</h1>
+
+@{
+	List<string> students = new List<string> { "Rahul", "Azeem", "Srisha", "Indu", "Bhargavi" };
+	int i = 0;
+}<br />
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>ID</th><th>Name</th><th>Length</th>
+		</tr>
+	</thead>
+	@foreach (string student in students){
+		<tr>
+			<td>@(++i)</td>
+			<td>@student</td>
+			<td>@student.Length</td>
+		</tr>
+	}
+</table>
+
+<br />
+Goto:
+<a asp-controller="RazorDemo" asp-action="Index">Index</a> |
+<a asp-controller="RazorDemo" asp-action="Ex01">Ex-01</a> |
+<a asp-controller="RazorDemo" asp-action="Ex02">Ex-02</a> |
+<a asp-controller="RazorDemo" asp-action="Ex03">Ex-03</a> |
+<a asp-controller="RazorDemo" asp-action="Ex04">Ex-04</a> |
+<a asp-controller="RazorDemo" asp-action="Ex06">Ex-06</a> |

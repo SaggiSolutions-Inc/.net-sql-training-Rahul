@@ -1,0 +1,25 @@
+﻿<h1> Razor Demo Index View</h1>
+
+<p> Razor is a programmable view engine</p>
+
+<p> Single line razor refers to single statements</p>
+
+Date: @DateTime.Now.ToLongDateString() <br />
+Time: @DateTime.Now.ToLongTimeString() <br />
+
+<p> Multi Razor, code block refers to multiple statements</p>
+
+@{
+	string name = "Rahul";
+	string city = "Hyderabad";
+}
+
+your developer name is: @name, He is from @city <br />
+
+Goto:
+<a asp-controller="RazorDemo" asp-action="Ex01">Ex-01</a> |
+<a asp-controller="RazorDemo" asp-action="Ex02">Ex-02</a> |
+<a asp-controller="RazorDemo" asp-action="Ex03">Ex-03</a> |
+<a asp-controller="RazorDemo" asp-action="Ex04">Ex-04</a> |
+<a asp-controller="RazorDemo" asp-action="Ex05">Ex-05</a> |
+<a asp-controller="RazorDemo" asp-action="Ex06">Ex-06</a> |

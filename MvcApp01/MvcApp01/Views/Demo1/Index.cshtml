@@ -1,0 +1,31 @@
+﻿<h1> Demo1 Controller</h1>
+
+<p> Passing data from controller action to view</p>
+
+@{
+	List<string> operations = TempData["operations"] as List<string>;
+	TempData.Keep("operations");
+}
+<form action="/" method="post">
+	@foreach (string op in operations){
+		<input type ="submit" value="@op" name="b1"/>
+	}
+</form>
+<br />
+@ViewBag.msg
+
+
+Name: @ViewData["name"].ToString() <br />
+
+City: @ViewBag.city <br />
+
+
+He teaches:
+<ol>
+@foreach (string technology in ViewBag.technologies){
+	<li>@technology</li>
+}
+</ol>
+
+Goto:
+<a asp-controller="demo1" asp-action="Ex01">Ex-01</a>

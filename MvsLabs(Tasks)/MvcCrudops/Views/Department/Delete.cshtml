@@ -1,0 +1,16 @@
+﻿<h1> Departments Delete View</h1>
+@{
+	DepartmentModel d = ViewBag.d;
+}
+
+@using(Html.BeginForm()){
+	@Html.Label("id","Department ID:");
+	@Html.TextBox("Id",d.Id); <br />
+	
+	@Html.Label("dname","Department Name:");
+	@Html.TextBox("dname",d.DName); <br />
+
+	@Html.Label("location","Depatment Location");
+	@Html.TextBox("location",d.Location); <br />
+	<button>Delete</button>
+}

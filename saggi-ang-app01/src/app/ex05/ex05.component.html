@@ -1,0 +1,16 @@
+<h1>Strutural Directives, Ex-05</h1>
+
+<input type="checkbox" [(ngModel)]="terms" /> 
+Accept Terms and condtiions <br/>
+
+<div *ngIf="terms; else reject_terms">
+    <p style="color:green">
+        Thank you for accepting terms...
+    </p>
+</div>
+
+<ng-template #reject_terms>
+    <p style="color:red">
+       Must read and accepting terms...
+    </p>
+</ng-template>

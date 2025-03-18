@@ -1,0 +1,14 @@
+﻿<h1> Create Department View</h1>
+ 
+@using(Html.BeginForm()){
+	@Html.Label("id","Department ID: ");
+	@Html.TextBox("id"); <br />
+
+	@Html.Label("dname","Department Name: ");
+	@Html.TextBox("dname"); <br />
+
+	@Html.Label("location","Depatment Location: ");
+	@Html.TextBox("location"); <br />
+
+	<button>Create</button>
+}

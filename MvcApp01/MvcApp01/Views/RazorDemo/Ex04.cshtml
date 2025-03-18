@@ -1,0 +1,25 @@
+﻿<h1> Razor View, Example - 04</h1>
+<br />
+@{
+	string[] gender = { "Male", "Female","Not Provided"};
+}
+Choose the gender: <br />
+@foreach(string g in gender){
+	<input type="radio" name="gender" /> @g
+} <br />
+
+
+<!--<input type="radio" name="gender"/>Male  <br/>
+<input type="radio" name="gender"/>Female -->
+<br />
+<input type ="checkbox"/>
+Terms and Conditions <br />
+
+<br />
+Goto:
+<a asp-controller="RazorDemo" asp-action="Index">Index</a> |
+<a asp-controller="RazorDemo" asp-action="Ex01">Ex-01</a> |
+<a asp-controller="RazorDemo" asp-action="Ex02">Ex-02</a> |
+<a asp-controller="RazorDemo" asp-action="Ex03">Ex-03</a> |
+<a asp-controller="RazorDemo" asp-action="Ex05">Ex-05</a> |
+<a asp-controller="RazorDemo" asp-action="Ex06">Ex-06</a> |

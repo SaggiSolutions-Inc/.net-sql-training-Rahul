@@ -1,0 +1,28 @@
+﻿<h1> Razor View, Example - 03</h1>
+<br />
+@{
+	string[] languages = { "English", "Hindi", "Urdu", "Telugu", "French", };
+	List<string> fruits = new List<string> { "Apple", "Banana", "Cherry" };
+}
+
+Select all the languages you know:
+<select multiple>
+	@foreach(string l in languages){
+		<option>@l</option>
+	}
+</select>
+<br />
+Select your favorite fruit:
+<select>
+@foreach(string fruit in fruits){
+	<option>@fruit</option>
+}
+</select>
+<br /> 
+Goto:
+<a asp-controller="RazorDemo" asp-action="Index">Index</a> |
+<a asp-controller="RazorDemo" asp-action="Ex01">Ex-01</a> |
+<a asp-controller="RazorDemo" asp-action="Ex02">Ex-02</a> |
+<a asp-controller="RazorDemo" asp-action="Ex04">Ex-04</a> |
+<a asp-controller="RazorDemo" asp-action="Ex05">Ex-05</a> |
+<a asp-controller="RazorDemo" asp-action="Ex06">Ex-06</a> |

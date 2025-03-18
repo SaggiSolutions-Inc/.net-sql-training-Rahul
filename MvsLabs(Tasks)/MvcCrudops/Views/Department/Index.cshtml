@@ -1,0 +1,34 @@
+﻿<h1> List of Departments</h1>
+
+@{
+	List<DepartmentModel> departments = ViewBag.departments;
+}
+<a asp asp-controller="department" asp-action="create">Create New Department</a> <br />
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Department Name</th>
+			<th>Location</th>
+			<th>Operations</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (DepartmentModel d in departments)
+		{
+			<tr>
+				<td>@d.Id</td>
+				<td>@d.DName</td>
+				<td>@d.Location</td>
+				<td><a asp-controller="department" asp-action="details" asp-route-id="@d.Id">Details</a> |
+					<a asp-controller="department" asp-action="edit" asp-route-id="@d.Id">Edit</a> |
+				<a asp-controller="department" asp-action="delete" asp-route-id="@d.Id">Delete</a> 
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+
+
+

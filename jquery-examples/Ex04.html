@@ -1,0 +1,21 @@
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".b1").click(function(){ // Use a class selector
+                var span1 = $("#span1");
+                var b1 = $(this).val();
+                if ( b1 === "date" ) { // Strict equality (===) is generally preferred
+                    span1.text("Date is "+new Date().toLocaleDateString());
+                } else if ( b1 === "time" ) {
+                    span1.text("Time is "+new Date().toLocaleTimeString());
+                }
+            });
+        });
+    </script>
+</head>
+<h1>JQuery, Ex-04</h1>
+<button class="b1" value="date" >Date</button>  <button class="b1" value="time" >Time</button>  <hr/>
+
+<span id="span1"> </span>

@@ -1,0 +1,21 @@
+﻿<h1> Postback - Ex05</h1>
+
+<form method="post" action="/postback/ex05">
+Enter name: <input type="text" name="b2"/><br /> 
+Gender: <input type="radio" name="gender" value="m"/>Male
+<input type="radio" name="gender" value="f" />Female
+<br /> 
+<input type="submit"/> <br />
+
+</form>
+<br /> 
+
+@ViewBag.msg
+<br />
+
+Goto:
+<a asp-controller="postback" asp-action="index">Index</a> |
+<a asp-controller="postback" asp-action="ex01">Ex01</a> |
+<a asp-controller="postback" asp-action="ex02">Ex02</a> |
+<a asp-controller="postback" asp-action="ex03">Ex03</a> |
+<a asp-controller="postback" asp-action="ex04">Ex04</a> |

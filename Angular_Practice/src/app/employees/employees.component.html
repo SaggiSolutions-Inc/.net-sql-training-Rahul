@@ -1,0 +1,23 @@
+<h1> Employees CRUD Ops</h1>
+<h2> Stuctural Derivatives</h2>
+<table border ="1">
+    <tr> 
+        <th>Id</th><th>Ename</th><th>Job</th><th>Salary</th>
+        <th>operations</th>
+    </tr>
+    <tr *ngFor="let e of employees">
+        <td>{{e.id}}</td>
+        <td>{{e.ename}}</td>
+        <td>{{e.job}}</td>
+        <td>{{e.salary}}</td>
+        <td><a href="#"(click)="getbyid(e.id)">Select</a>|
+        <a href="#"(click)="deletebyid(e.id)">Delete</a><td>
+    </tr>
+</table> {{msg}} <hr/>
+Id: <input type ="number" [(ngModel)]="e.id"/> <br/>
+Name: <input type ="text" [(ngModel)]="e.ename"/> <br/>
+Job: <input type ="text" [(ngModel)]="e.job"/> <br/>    
+Salary: <input type ="number" [(ngModel)]="e.salary"/> <br/>
+<button (click)="editEmployeeById(e.id)">Edit Employee</button>
+<button (click)="addemployee()">Add Employee</button>
+<button (click)="e={}">Clear All</button>

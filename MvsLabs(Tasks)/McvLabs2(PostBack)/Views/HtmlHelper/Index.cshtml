@@ -1,0 +1,26 @@
+﻿<h1> HTMl Helpers Demo Conreoller, Index View </h1>
+
+<p> HTML Helper is a predefined class in MVC.NET core<br /> 
+	These are used to generate html tags programatically <br /> 
+	The tags generated using Html Helper are statuful 
+</p>
+
+<!--@{Html.BeginForm();}
+<button>Submit</button>
+@{Html.EndForm();} This same process can also be written in he below form-->
+
+@using (Html.BeginForm()){
+	@Html.Label("t1","Enter Name:");
+	@Html.TextBox("t1");<br /> 
+
+	<button>Submit</button>  <!--No need or form metod and action to be used with the help pf html helpers-->
+}
+
+
+<br /> 
+@ViewBag.msg <br /> 
+Time: @DateTime.Now.ToLongTimeString()
+<br />
+Goto:
+
+<a asp-controller="htmlhelper" asp-action="ex01">Ex01</a>

@@ -1,0 +1,26 @@
+﻿<h1>Passing data</h1> <br />
+<h2> List of students </h2>
+@{
+	string[] students = ViewBag.students;
+}
+
+ <table class ="table table-bordered">
+	 <tr>
+		 <th>ID</th><th>Name</th>
+		 <th>Upper Case</th> <th>Lower Case</th>
+		 <th>Length</th>
+	 </tr>
+@for (int i = 0; i<students.Length;i++)
+{
+	<tr>
+		<td>@(i+1)</td>
+		<td>@students[i]</td>
+		<td>@students[i].ToUpper()</td>
+		<td>@students[i].ToLower()</td>
+		<td>@students[i].Length</td>
+		</tr> 
+}
+		
+		
+
+	

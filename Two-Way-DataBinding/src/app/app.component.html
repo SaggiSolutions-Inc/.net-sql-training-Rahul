@@ -1,0 +1,57 @@
+<h1>{{heading}}</h1>
+<p>{{topic}}</p>
+<h2>EX-01</h2>
+
+Enter name at source:
+<input type="text"[(ngModel)]="uname"/> <hr/>
+
+Hello {{uname}} <hr/>
+Enter Name at target:
+<input type="text"[(ngModel)]="uname"/> <hr/> 
+
+<h2>EX-02</h2>
+
+<input type="text" [(ngModel)]="t1"/><br/>
+
+Name: {{t1}} letters <br/>
+Lenght is {{t1.length}} letters <br/>
+UPPER CASE: {{t1.toUpperCase()}} <br/>
+lower case: {{t1.toLowerCase()}} <hr/>
+
+<h2>EX-03</h2> 
+Enter number:
+<input type="number" [(ngModel)]="n"/><br/>
+{{"Given no is: "+n}}<br/>
+{{"Square is: "+n*n}}<hr/>
+
+<h2>EX-04</h2>
+Choose Gender:
+<input type="radio" [(ngModel)]="gender" name="gender" value="Mr."/> Male
+
+<input type="radio" [(ngModel)]="gender" name="gender" value="Miss"/> Female <hr/>
+
+{{"Hi "+gender}} <hr/>
+
+<h2>EX-05</h2>
+<input type="checkbox" [(ngModel)]="terms"/> Terms and conditions <br>
+{{terms}} <hr/>
+
+<h2>EX-06</h2>
+Choose Favorite color:
+<select [(ngModel)]="color">
+    <option value="RED">Red</option>
+    <option value="GREEN">Green</option>
+    <option value="BLUE">Blue</option>
+    <option value="CYAN">Cyan</option>
+</select> <br/>
+The selected color is {{color}} <hr/>
+
+<h2>EX-07</h2>
+Choose Languages you know:
+<select [(ngModel)]="languages" multiple>
+    <option value="English">English</option>
+    <option value="Telugu">Telugu</option>
+    <option value="Hindi">Hindi</option>
+    <option value="Tamil">Tamil</option>
+</select> <br/>
+The selected Languages are  {{languages}}

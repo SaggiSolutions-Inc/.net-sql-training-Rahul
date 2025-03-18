@@ -1,0 +1,12 @@
+﻿<h1> Person Details for @ViewBag.people.Id</h1>
+
+@{
+	PersonModel people = ViewBag.people;
+}
+
+ID: @people.Id <br /> 
+Name: @people.PName <br />
+Gender: @people.Gender <br />
+Age: @people.Age <br />
+
+<a asp-controller="People" asp-action="index">Back to Index</a>

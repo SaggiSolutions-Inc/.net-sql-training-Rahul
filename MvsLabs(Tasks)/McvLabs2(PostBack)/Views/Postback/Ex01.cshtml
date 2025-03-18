@@ -1,0 +1,15 @@
+﻿<h1> Postback - Ex01</h1>
+<br />
+
+<form method="post" action="/postback/ex01">
+ <button name="b1" value="Accept">Accept</button>
+ <button name="b1" value="Reject">Reject</button>
+	</form>
+	<br />
+	@ViewBag.msg <br />
+Time: @DateTime.Now.ToLongTimeString()
+<a asp-controller="postback" asp-action="index">Index</a> |
+<a asp-controller="postback" asp-action="ex02">Ex02</a> |
+<a asp-controller="postback" asp-action="ex03">Ex03</a> |
+<a asp-controller="postback" asp-action="ex04">Ex04</a> |
+<a asp-controller="postback" asp-action="ex05">Ex05</a> |
